@@ -1,0 +1,25 @@
+//
+// Prefix header for all source files of the 'Alarm' target in the 'Alarm' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#import "AppDelegate.h"
+
+#define APP_DELEGATE            (AppDelegate*)[[UIApplication sharedApplication] delegate]
+
+NSUserDefaults *userDefaults;
+
+#define UD_WAKE_UP_TIME_KEY     @"UD_WAKE_UP_TIME_KEY"
+#define DEFAULT_WAKE_UP_TIME    @"08:00"
+
+NSString   *wakeUpTime;
